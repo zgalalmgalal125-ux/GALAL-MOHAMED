@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: egypt-baccalaureate-news
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: NEWS_REFRESH_MINUTES
+        value: 15
+    disk:
+      name: news-data
+      mountPath: /var/data
+      sizeGB: 1
