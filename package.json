@@ -1,0 +1,21 @@
+{
+  "name": "egypt-baccalaureate-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "منصة أخبار البكالوريا المصرية والقرارات التعليمية",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "express-rate-limit": "^8.1.0",
+    "rss-parser": "^3.13.0",
+    "dotenv": "^16.4.7"
+  }
+}
